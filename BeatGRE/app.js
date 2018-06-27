@@ -134,7 +134,10 @@ app.post('/login', function (req, res){
             if (result.length!=0){
                 console.log(result[0]);
                 console.log("sql size: "+result.length);
-                if (result[0].password ==user.password ) {
+                console.log(result[0].password);
+                console.log(user.password);
+                if (result[0].password ===user.password ) {
+                    console.log("???");
                     res.end('{"result" : "success", "status" : 200}');
                 }else res.end('{"result" : "wrong_password", "status" : 200}');
             }else{
