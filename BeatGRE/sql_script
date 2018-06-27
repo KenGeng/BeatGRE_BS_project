@@ -1,0 +1,27 @@
+create database beatgre_db;
+use beatgre_db;
+create table user_info (
+    uid int NOT NULL AUTO_INCREMENT,
+    user_name varchar(30) NOT NULL,
+    password varchar(30) NOT NULL,
+    email varchar(50) NOT NULL,
+    primary key(uid),
+    CONSTRAINT unique_index UNIQUE (uid,user_name,email)
+);
+
+create table user_record(
+    record_id int NOT NULL AUTO_INCREMENT,
+    uid int NOT NULL,
+    book_id int NOT NULL,
+    remember_num int NOT NULL,
+    primary key(record_id)
+
+);
+create table books(
+    book_id int NOT NULL AUTO_INCREMENT,
+    book_name varchar(30) ,
+    total_num int NOT NULL,
+    primary key(book_id)
+
+);
+
