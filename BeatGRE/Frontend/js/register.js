@@ -79,12 +79,35 @@ function register(username, password, email){
             datatype: "json",
             type: 'post',
             success: function (res) {
-                console.log(res)
+                console.log(res);
+                var temp=JSON.parse(res);
+                console.log(temp.error);
+
                 alert("注册成功！现在请使用刚才注册的账户登陆!");
                 window.location.href = 'home.html';
-            },
-            error:function (res) {
 
+            },
+            // duplicate_name: function (res) {
+            //     console.log(res)
+            //     alert("用户名重复，换个名字吧!");
+            //     //window.location.href = 'home.html';
+            // },
+            // duplicate_email:function (res) {
+            //     console.log(res)
+            //     alert("该邮箱已注册!");
+            //     //window.location.href = 'home.html';
+            // },
+            error:function (res) {
+                console.log(res);
+                var temp=JSON.parse(res);
+                console.log(temp.error);
+                if (temp.error == "duplicate_name"){
+                    alert("用户名重复，换个名字吧!");
+                }
+                else if (temp.error == "duplicate_email"){
+                    alert("该邮箱已注册!");
+                }
+                else alert("未知错误!");
             }
 
         })

@@ -6,7 +6,8 @@ create table user_info (
     password varchar(30) NOT NULL,
     email varchar(50) NOT NULL,
     primary key(uid),
-    CONSTRAINT unique_index UNIQUE (uid,user_name,email)
+    UNIQUE KEY (user_name),
+    UNIQUE KEY (email)
 );
 
 create table user_record(
