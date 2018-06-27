@@ -28,32 +28,6 @@ connection.connect();
 //         // res.sendfile(__dirname + "/" + "OK.html" );
 //     })
 // })
-//
-// app.get('/signin.html',function (req,res) {
-//     var registerHtmlPath=path.resolve(__dirname,'..','signin.html');
-//     res.sendFile(registerHtmlPath);
-//     // res.sendfile(__dirname+"/"+"register.html");
-// })
-
-/**
- * 实现注册功能
- */
-app.get('/register',function (req,res) {
-    var  name=req.body.username;
-    var  password=req.body.password;
-    var  email=req.body.password;
-    var  user={user_name:name,password:password,email:email};
-    connection.query('insert into user_info set ?',user,function (err,rs) {
-        if (err) throw  err;
-        console.log('register has been written to database\n');
-        // res.sendfile(__dirname + "/" + "index.html" );
-        var homeHtmlPath=path.resolve(__dirname,'..','home.html');
-        res.sendFile(homeHtmlPath);
-    })
-});
 
 
-var  server=app.listen(5222,function () {
-    console.log("start");
-})
-//
+module.exports = router;

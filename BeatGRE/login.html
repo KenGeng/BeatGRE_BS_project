@@ -31,7 +31,7 @@
         <div class="row center">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">account_circle</i>
-                <input placeholder="input your user name" id="username" type="text" name="name" class="validate">
+                <input placeholder="input your user name or email address" id="user_name_email" type="text" name="user_name_email" class="validate">
                 <!--<label for="username">username</label>-->
             </div>
         </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="row center">
-            <input type="submit" id="login-button" class="btn-large waves-effect waves-light orange" value="提交" datatype="submit"/>
+            <input type="submit" id="login-button" class="btn-large waves-effect waves-light orange" value="confirm" onclick="login(user_name_email, password);"/>
         </div>
 
         <br><br>
@@ -120,7 +120,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <a class="orange-text text-lighten-3">Made by <a class="orange-text text-lighten-3" href="https://github.com/KenGeng">3150105222 耿飙</a>
+            Made by <a class="orange-text text-lighten-3" href="https://github.com/KenGeng">3150105222 耿飙</a>
         </div>
     </div>
 
@@ -129,7 +129,8 @@
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+<script src="./Frontend/js/materialize.js"></script>
+<script src="./Frontend/js/init.js"></script>
+<script src="./Frontend/js/login.js"></script>
 </body>
 </html>

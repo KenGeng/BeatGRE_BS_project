@@ -60,6 +60,8 @@ var usersRouter = require('./routes/users');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/register', registerRouter);
+
+//register handler
 app.post('/register', function (req, res) {
 
     console.log(req.body);
@@ -115,6 +117,49 @@ app.post('/register', function (req, res) {
 
 });
 
+
+//login handler
+app.post('/login', function (req, res){
+    console.log(req.body);
+    console.log(req.body.user_name_email);
+    // console.log(req.body.page);
+    // console.log(req.query);
+    var  user={user_name_email:req.body.user_name_email,password:req.body.password};
+    console.log("sql in: "+user.user_name_email+" "+ user.password);
+    connection.query(
+        //check username first (high priority)
+        'select user_name,password  from user_info where user_name = ? ',
+        [user.user_name_email],
+        function(err, result) {
+            if (result.length!=0){
+                console.log(result[0]);
+                console.log("sql size: "+result.length);
+                if (result[0].password ==user.password ) {
+                    res.end('{"result" : "success", "status" : 200}');
+                }else res.end('{"result" : "wrong_password", "status" : 200}');
+            }else{
+                //check email
+                connection.query(
+                    'select  email,password from user_info where  email = ?',
+                    [ user.email],
+                    function(err, result) {
+                        if (result.length!=0){
+                            if (result[0].password ==user.password ) {
+                                res.end('{"result" : "success", "status" : 200}');
+                            }else res.end('{"result" : "wrong_password", "status" : 200}');
+                        }else {
+                            res.end('{"result" : "not_exist", "status" : 200}');
+                        }
+
+                    }
+                );
+            }
+
+        }
+    );
+
+
+});
 
 
 // catch 404 and forward to error handler

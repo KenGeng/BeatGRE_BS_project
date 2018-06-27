@@ -93,16 +93,6 @@ function register(username, password, email){
 
 
             },
-            // duplicate_name: function (res) {
-            //     console.log(res)
-            //     alert("用户名重复，换个名字吧!");
-            //     //window.location.href = 'home.html';
-            // },
-            // duplicate_email:function (res) {
-            //     console.log(res)
-            //     alert("该邮箱已注册!");
-            //     //window.location.href = 'home.html';
-            // },
             error:function (res) {
                 alert("未知错误!");
             }
