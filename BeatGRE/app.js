@@ -1,6 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
-var Async = require('async');
+
 // const cors = require('cors');
 
 //connect database first; mysql
@@ -67,63 +67,47 @@ app.post('/register', function (req, res) {
     // console.log(req.body.page);
     // console.log(req.query);
     var  user={user_name:req.body.username,password:req.body.password,email:req.body.email};
+    console.log("sql in: "+user.user_name+" "+ user.email);
+    connection.query(
+        'select user_name  from user_info where user_name = ? ',
+        [user.user_name ],
+        function(err, result) {
+            if (result.length!=0){
+                console.log(result[0]);
+                console.log("sql size: "+result.length);
+                // for(var i = 0; i < result.length; i++)
+                // {
+                //     //option[i] = {'label':results[i].domain,'value':results[i].domain};
+                //     //console.log(results[i].domain);
+                //     // option.push({'label':results[i].domain,'value':results[i].domain});
+                //     console.log("sql out: "+result[i].email);
+                // }
+                res.end('{"result" : "duplicate_name", "status" : 200}');
+            }else{
+                connection.query(
+                    'select  email from user_info where  email = ?',
+                    [ user.email],
+                    function(err, result) {
+                        if (result.length!=0){
+                            res.end('{"result" : "duplicate_email", "status" : 200}');
+                        }else {
+                            //insert success
+                            connection.query('insert into user_info set ?',user,function (err,rs) {
+                                if (err) throw  err;
+                                console.log('register has been written to database\n');
 
+                                res.end('{"result" : "success", "status" : 200}');
 
+                                // res.sendFile(homeHtmlPath);
+                            });
+                        }
 
-    Async.parallel(
-        [
-            connection.query(
-                'select user_name  from user_info where user_name = ? ',
-                [user.user_name ],
-                function(err, result) {
-                    if (result){
-                        // console.log("sql size: "+result.length);
-                        // for(var i = 0; i < result.length; i++)
-                        // {
-                        //     //option[i] = {'label':results[i].domain,'value':results[i].domain};
-                        //     //console.log(results[i].domain);
-                        //     // option.push({'label':results[i].domain,'value':results[i].domain});
-                        //     console.log("sql out: "+result[i].email);
-                        // }
-                        res.end('{"error" : "duplicate_name", "status" : 404}');
                     }
-
-                }
-            ),
-            connection.query(
-                'select  email from user_info where  email = ?',
-                [ user.email],
-                function(err, result) {
-                    if (result){
-                        res.end('{"error" : "duplicate_email", "status" : 404}');
-                    }
-
-                }
-            )
-        ],
-        function(err, results){
-            var user = results[0];
-            var email = results[1];
-            if (user||email){
-
-            } else {
-                console.log("sql in: "+user.user_name+" "+ user.email);
-
-
-
-
-                connection.query('insert into user_info set ?',user,function (err,rs) {
-                    if (err) throw  err;
-                    console.log('register has been written to database\n');
-
-                    res.end('{"success" : "Updated Successfully", "status" : 200}');
-
-                    // res.sendFile(homeHtmlPath);
-                });
+                );
             }
+
         }
     );
-
 
 
 

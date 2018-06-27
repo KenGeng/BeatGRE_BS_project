@@ -16,19 +16,19 @@ function checkInfo(username,password,email){
     } else  return true;
 }
 //解决要点两次button才响应的问题
-var a=1;
+// var a=1;
 function register(username, password, email){
 
 
-        var e=document.getElementById("register-button1");
-
-        if(a==1){
-            e.style.display="block";
-            a=0;
-        } else {
-            e.style.display="none";
-            a=1;
-        }
+        // var e=document.getElementById("register-button1");
+        //
+        // if(a==1){
+        //     e.style.display="block";
+        //     a=0;
+        // } else {
+        //     e.style.display="none";
+        //     a=1;
+        // }
     if (checkInfo(username,password,email)==true){
         alert('select_link clicked');
         // var username = $("#username").val();
@@ -81,10 +81,16 @@ function register(username, password, email){
             success: function (res) {
                 console.log(res);
                 var temp=JSON.parse(res);
-                console.log(temp.error);
+                console.log(temp.result);
+                if (temp.result == "duplicate_name"){
+                    alert("用户名重复，换个名字吧!");
+                } else if (temp.result === "duplicate_email"){
+                    alert("该邮箱已注册!");
+                } else{
+                    alert("注册成功！现在请使用刚才注册的账户登陆!");
+                    window.location.href = 'home.html';
+                }
 
-                alert("注册成功！现在请使用刚才注册的账户登陆!");
-                window.location.href = 'home.html';
 
             },
             // duplicate_name: function (res) {
@@ -98,16 +104,7 @@ function register(username, password, email){
             //     //window.location.href = 'home.html';
             // },
             error:function (res) {
-                console.log(res);
-                var temp=JSON.parse(res);
-                console.log(temp.error);
-                if (temp.error == "duplicate_name"){
-                    alert("用户名重复，换个名字吧!");
-                }
-                else if (temp.error == "duplicate_email"){
-                    alert("该邮箱已注册!");
-                }
-                else alert("未知错误!");
+                alert("未知错误!");
             }
 
         })
