@@ -66,9 +66,25 @@ app.post('/register', function (req, res) {
     console.log(req.body.username);
     // console.log(req.body.page);
     // console.log(req.query);
+    var  user={user_name:req.body.username,password:req.body.password,email:req.body.email};
 
-    //这时可以看到控制台输出了：前端传过来的参数{page:1,pageSize:10,classify_id:77}
-    res.send('respond with a resource');
+    connection.query(
+        'select user_name,email from user_info where user_name = ? or email = ?',
+        [user.user_name.value, user.email.value],
+        function(err, result) {
+            console.log("sql out: "+result);
+        }
+    );
+
+    connection.query('insert into user_info set ?',user,function (err,rs) {
+        if (err) throw  err;
+        console.log('register has been written to database\n');
+
+        res.end('{"success" : "Updated Successfully", "status" : 200}');
+
+        // res.sendFile(homeHtmlPath);
+    });
+
 });
 
 

@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="row center">
-                <input type="submit" id="register-button1" class="btn-large waves-effect orange" value="提交"/>
+                <input type="submit" id="register-button1" class="btn-large waves-effect orange" value="提交" onclick="return register(username, password, email);"/>
             </div>
 
 
@@ -135,108 +135,15 @@
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <script src="./Frontend/js/materialize.js"></script>
+    <script src="./Frontend/js/init.js"></script>
+    <script src="./Frontend/js/register.js"></script>
+    <!--<script type="text/javascript">-->
 
-    <script type="text/javascript">
-        $(function(){
-            // $("#login1").click(function(){
-            //     location.href = 'login';
-            // });
-            console.log("well1");
-            $("#register-button1").click(
-                function(){
-                alert('select_link clicked');
-                var username = $("#username").val();
-                var password = $("#password").val();
-                var email = $("#email").val();
+        <!--$(-->
 
-
-                var data = {"username":username,"password":password,"email":email};
-
-                console.log("ddd"+data.toString());
-                // data.username=$("#username").val();
-                // data.email=email.val;
-                // data.password=password.val;
-                //data=document.getElementById("username").value+"&"+document.getElementById("password").value+"&"+document.getElementById("email").value,
-                alert("well"+data);
-                // var xhr=new XMLHttpRequest();
-                // xhr.open('POST','http://localhost:5222/register',true);
-                // xhr.withCredentials=true;
-                // xhr.onload=function (data) {
-                //     console.log(data);
-                // };
-                // xhr.send(null);
-                //method 1: only use url
-                // $.ajax({
-                //
-                //
-                //     data: document.getElementById("username").value+"&"+document.getElementById("password").value+"&"+document.getElementById("email").value,
-                //     url: 'http://127.0.0.1:5222/register',
-                //
-                //     async:false,
-                //     dataType: "jsonp",
-                //     // contentType: "application/json; charset=utf-8",
-                //     jsonp: "callback",
-                //     jsonpCallback: "success_callback",
-                //
-                //     success: function(data,status){
-                //         alert(">"+data);
-                //         console.log('success');
-                //         console.log("duck"+JSON.stringify(data));
-                //         location.href = 'home.html';
-                //     },
-                //     error: function(data,err){
-                //         alert("sad"+JSON.stringify(data)+"..."+data);
-                //         console.log("duck"+JSON.stringify(data));
-                //         console.log("well");
-                //         location.href = 'register.html';
-                //     }
-                // });
-                //method 1: 一般的跨域方法
-                // $.ajax({
-                //     url: 'http://localhost:5222/register',
-                //     type: 'POST',
-                //
-                //     // data: {"username":$("#username").val(),"password":$("#password").val(),"email":$("#email").val()},
-                //     // data: JSON.stringify(document.getElementById("username").value+"&"+document.getElementById("password").value+"&"+document.getElementById("email").value),
-                //     data:JSON.stringify({page:1,pageSize:10,classify_id:77}),
-                //     // processData: false,
-                //     contentType: 'application/json;charset=utf-8',
-                //
-                //     success: function(data){
-                //         console.log("fuck");
-                //         if(status == 'success'){
-                //             console.log(data);
-                //             alert("succ");
-                //             location.href = 'home.html';}
-                //     },
-                //     error: function(data,err){
-                //         alert("error:"+data+"sd"+err);
-                //         console.log("well");
-                //         // location.href = 'register.html';
-                //     }
-                // });
-                    $.ajax({url:'http://localhost:5222/register',
-                        processData: false,
-                        cache:false,
-                         contentType: "application/json; charset=utf-8",
-                        //contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                        // data:{page:1,pageSize:10,classify_id:77},
-                        data:JSON.stringify(data),
-                        datatype: "json",
-                        type: 'post',
-                        success: function (res) {
-                            console.log(res)
-                        },error:function (res) {
-
-                        }
-
-                    })
-
-            });
-        });
-    </script>
+        <!--);-->
+    <!--</script>-->
 
 </body>
 </html>
