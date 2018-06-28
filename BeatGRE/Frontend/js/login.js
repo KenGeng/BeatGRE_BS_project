@@ -37,7 +37,7 @@ function login(user_name_email, password){
                     alert("密码错误!");
                 } else{
                     alert("登陆成功！欢迎!");
-                    window.location.href = 'home.html';
+                    window.location.href = 'userface.html';
                 }
 
 

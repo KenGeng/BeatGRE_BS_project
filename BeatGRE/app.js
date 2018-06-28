@@ -144,8 +144,10 @@ app.post('/login', function (req, res){
                 //check email
                 connection.query(
                     'select  email,password from user_info where  email = ?',
-                    [ user.email],
+                    [ user.user_name_email],
                     function(err, result) {
+
+                        console.log("length:"+result.length);
                         if (result.length!=0){
                             if (result[0].password ==user.password ) {
                                 res.end('{"result" : "success", "status" : 200}');
