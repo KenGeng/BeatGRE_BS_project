@@ -16,6 +16,9 @@
     font-family: Calibri;
     font-style: italic;
 }
+.card-title{
+    font-style: italic;
+}
 .icon-block {
   padding: 0 15px;
 }
