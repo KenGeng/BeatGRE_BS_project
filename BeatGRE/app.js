@@ -55,10 +55,13 @@ app.all('*',function (req, res, next) {
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var reciteRouter =require('./routes/recite');
+
+var diywordRouter =require('./routes/diyword');
 // var registerRouter = require('./routes/register');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/recite',reciteRouter);
+app.use('/diyword',diywordRouter);
 // app.use('/register', registerRouter);
 
 //register handler
@@ -106,7 +109,6 @@ app.post('/register', function (req, res) {
                                 //     done_num int DEFAULT 0,
                                 //     primary key(setting_id)
                                 //  );
-
                                 connection.query('create table  '+user.user_name+'_setting (setting_id int NOT NULL AUTO_INCREMENT, book_id int DEFAULT 1 ,word_batch int DEFAULT 7,daily_task int DEFAULT 49,done_num int DEFAULT 0,primary key(setting_id) )',function (err,rs) {
                                     if (err) throw  err;
                                     console.log('user_setting table has been written to database\n');
@@ -115,6 +117,10 @@ app.post('/register', function (req, res) {
                                 connection.query('INSERT INTO '+user.user_name+'_setting set ?',initial_setting,function (err,rs) {
                                     if (err) throw  err;
                                     console.log('initial setting table has been written to database\n');
+                                });
+                                connection.query('create table  '+user.user_name+'_diyword (word_id int NOT NULL AUTO_INCREMENT, book_id int DEFAULT 1 ,word varchar(40) ,translation varchar(200),primary key(word_id) )',function (err,rs) {
+                                    if (err) throw  err;
+                                    console.log('diyword has been written to database\n');
                                 });
 
                                 res.end('{"result" : "success", "status" : 200}');

@@ -5,7 +5,7 @@ var fs = require('fs');
 var connection = require('../dbhelper');
 
 var file = './word_list/gre_list.json';
-var request = JSON.parse(fs.readFileSync(file));
+var GRE_List = JSON.parse(fs.readFileSync(file));
 // var hasRemembered ;
 router.get('/', function(req, res, next) {
     //
@@ -43,11 +43,11 @@ router.get('/', function(req, res, next) {
                 for(var i = done_num; i < done_num+wordbatch-1; ++i)
                 {
                     // {"word":"abbreviate","translation":"v.缩写，缩短：briefer"}
-                    response+='{"word":"'+request[i].word+'",';
-                    response+='"translation":"'+request[i].translation+'"},';
+                    response+='{"word":"'+GRE_List[i].word+'",';
+                    response+='"translation":"'+GRE_List[i].translation+'"},';
                 }
-                response+='{"word":"'+request[done_num+wordbatch-1].word+'",';
-                response+='"translation":"'+request[done_num+wordbatch-1].translation+'"}';
+                response+='{"word":"'+GRE_List[done_num+wordbatch-1].word+'",';
+                response+='"translation":"'+GRE_List[done_num+wordbatch-1].translation+'"}';
                 response+='] }';
                 console.log(response);
                 var temp = JSON.parse(response);

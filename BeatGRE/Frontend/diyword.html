@@ -31,7 +31,7 @@
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
 
-        <h3 class="header center orange-text ">I Like Words!</h3>
+        <h3 class="header center orange-text ">Let's go!</h3>
 
     </div>
 
@@ -48,24 +48,13 @@
             <div class="col center-align s6 m6 offset-m3" id="kkk" >
                 <br><br>
 
-                <!--<ul class="collapsible " data-collapsible="accordion">-->
-                    <!--<li>-->
-                        <!--<div class="collapsible-header">-->
-                            <!--<i class="material-icons">filter_drama</i>-->
-                            <!--First0-->
-                            <!--<span class="badge light-green-text">add</span>-->
-                            <!--<span class="badge light-green-text">check</span>-->
-                        <!--</div>-->
-                        <!--<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>-->
-                    <!--</li>-->
-                <!--</ul>-->
+
                 <template id="word_expandable">
                     <ul class="collapsible " data-collapsible="accordion">
                         <li >
                             <div class="collapsible-header">
                                 <i class="material-icons">filter_drama</i>
                                 <span id="word_content"></span>
-                                <span class="badge light-green-text">add</span>
                                 <span class="badge light-green-text">check</span>
                             </div>
                             <div class="collapsible-body"><p id="translation_content"></p></div>
@@ -79,13 +68,11 @@
                 <br>
                 <div class="row ">
                     <div class="col center s6 m6 ">
-                        <!--响应事件？刷新网页？-->
-                        <!--<a class="black-text" href="#">上一页</a>-->
-                        <input type="submit" id="back-page-button" class="btn-small waves-light green" value="上一页" onclick="backpage(); window.location.reload();"/>
+
+                        <input type="submit" id="back-page-button" class="btn-small waves-light green" value="上一页" onclick="backpage();"/>
                     </div>
                     <div class="col center s6 m6 ">
-                        <input type="submit" id="next-page-button" class="btn-small waves-light green" value="下一页" onclick="nextpage(); window.location.reload();"/>
-                        <!--<a class="black-text" href="#">下一页</a>-->
+                        <input type="submit" id="next-page-button" class="btn-small waves-light green" value="下一页" onclick=" nextpage(); "/>
                     </div>
                 </div>
 
@@ -125,7 +112,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 
-<script src="js/recite.js"></script>
+<script src="js/diyword.js"></script>
 <script src="js/init.js"></script>
 </body>
 </html>
