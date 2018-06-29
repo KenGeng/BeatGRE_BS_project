@@ -2,9 +2,9 @@
 BeatGRE; project of coures B/S
 
 # to-do list
-1. 用户主页
+1. 用户主页 done
 2. 词库选择(toefl gre)
-3. 单词显示
+3. 单词显示 done
 4. 复习计划
 5. 单词本
 6. 考核

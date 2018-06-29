@@ -1,28 +1,26 @@
 var express = require('express');
+
 var router = express.Router();
 var fs = require('fs');
+var connection = require('./dbhelper');
 
-var wordMapObj = new Map();
-var word_ID_map = new Map();
 var file = './word_list/gre_list.json';
 var request = JSON.parse(fs.readFileSync(file));
-var loopNum = 0;
-for (i in request){
-    var x = request[i].word;
-    var y = request[i].translation;
-    wordMapObj.set(x,y);
-    word_ID_map.set(loopNum,x);
-    loopNum++;
-}
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
-    var remembered_num=0;
-    var response = '{"wordpatch": [ ';
+    //
+    // connection.query(
+    //     'select user_name  from user_info where user_name = ? ',
+    //     [user.user_name ]);
+    //
+
+
     var wordpatch = 10;
-    for(var i = 0; i < wordpatch; ++i)
+    var record = 10;
+    var response = '{"wordpatch": [ ';
+
+    for(var i = record; i < record+wordpatch; ++i)
     {
-        // response += word_ID_map.get(remembered_num+i) + "&";
-        // response += wordMapObj.get(word_ID_map.get(remembered_num+i)) + "&";
         // {"word":"abbreviate","translation":"v.缩写，缩短：briefer"}
         response+='{"word":"'+request[i].word+'",';
         response+='"translation":"'+request[i].translation+'"},';

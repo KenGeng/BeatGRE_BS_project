@@ -4,19 +4,18 @@ var express = require('express');
 // const cors = require('cors');
 
 //connect database first; mysql
-var mysql=require('mysql');
 var path = require('path');
+//
+// var connection = mysql.createConnection({
+//     host     : 'localhost',
+//     user     : 'root',
+//     password : 'gengbiao',
+//     database : 'beatgre_db'
+// });
+//
+// connection.connect();
 
-var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'gengbiao',
-    database : 'beatgre_db'
-});
-
-connection.connect();
-
-
+var connection = require('./dbhelper');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -97,7 +96,26 @@ app.post('/register', function (req, res) {
                             //insert success
                             connection.query('insert into user_info set ?',user,function (err,rs) {
                                 if (err) throw  err;
-                                console.log('register has been written to database\n');
+                                console.log(user.user_name+'register has been written to database\n');
+                                //add user_setting_table
+                                // create table user_setting(
+                                //     setting_id int NOT NULL AUTO_INCREMENT,
+                                //     book_id int DEFAULT 1 ,
+                                //     word_batch int DEFAULT 7,
+                                //     daily_task int DEFAULT 49,
+                                //     done int DEFAULT 0,
+                                //     primary key(setting_id)
+                                //  );
+
+                                connection.query('create table  '+user.user_name+'_setting (setting_id int NOT NULL AUTO_INCREMENT, book_id int DEFAULT 1 ,word_batch int DEFAULT 7,daily_task int DEFAULT 49,done int DEFAULT 0,primary key(setting_id) )',function (err,rs) {
+                                    if (err) throw  err;
+                                    console.log('user_setting table has been written to database\n');
+                                });
+                                var initial_setting ={book_id:1,word_batch:10,daily_task:49,done:0};
+                                connection.query('INSERT INTO '+user.user_name+'_setting set ?',initial_setting,function (err,rs) {
+                                    if (err) throw  err;
+                                    console.log('initial setting table has been written to database\n');
+                                });
 
                                 res.end('{"result" : "success", "status" : 200}');
 

@@ -10,9 +10,8 @@ create table user_info (
     UNIQUE KEY (email)
 );
 
-create table user_record(
+create table user_diybook(
     record_id int NOT NULL AUTO_INCREMENT,
-    uid int NOT NULL,
     book_id int NOT NULL,
     remember_num int NOT NULL,
     primary key(record_id)
@@ -26,3 +25,11 @@ create table books(
 
 );
 
+create table user_setting(
+    setting_id int NOT NULL AUTO_INCREMENT,
+    book_id int DEFAULT 1 ,
+    word_batch int DEFAULT 7,
+    daily_task int DEFAULT 49,
+    done int DEFAULT 0,
+     primary key(setting_id)
+)
