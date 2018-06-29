@@ -7,10 +7,12 @@
         showWord();
         var value = localStorage["user_name"];
         document.getElementById("user_name").innerText=value;
+
     });
 
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     // showWord();
+
+    // document.getElementById("kkk").addEventListener('click', function() {
+    //
     // });
 
 })(jQuery); // end of jQuery name space
@@ -57,9 +59,40 @@ function showWord() {
                 var singleline = document.querySelector("#word_expandable");
                 singleline.content.getElementById("word_content").innerText=batch[i].word;
                 singleline.content.getElementById("translation_content").innerText=batch[i].translation;
+                // singleline.content.getElementById("add-button").addEventListener('click',function () {
+                //     alert("hhh");
+                //
+                // });
+                // singleline.content.querySelector("input").onclick=addDiy;
+                //singleline.content.getElementById("add-button").onclick=function(){alert('a1');};
                 document.getElementById("kkk").appendChild(singleline.content.cloneNode(true));
             }
             $('.collapsible').collapsible();//一行代码 花了7个小时 哎
+            for (var i = 0; i < batch.length; i++) {
+                document.getElementById("kkk").children[3+i].querySelector('input').addEventListener('click',function () {
+                    var word = this.parentElement.parentElement.children[0].children.namedItem("word_content").innerHTML;
+                    $.ajax({url:'http://localhost:5222/diyword',
+                        processData: false,
+                        cache:false,
+                        contentType: "application/json; charset=utf-8",
+                        data:'&'+word,
+                        datatype: "json",
+                        type: 'get',
+                        success: function (res) {
+
+                        },
+                        error:function (res) {
+                            alert("未知错误!");
+                        }
+
+                    })
+
+
+
+
+                });
+            }
+
 
         },
         error:function (res) {
@@ -125,4 +158,14 @@ function backpage() {
     }
 
 
+}
+
+function addDiy(){
+    // var singleline = document.querySelector("#word_expandable");
+    // // singleline.content.getElementById("word_content").innerText=batch[i].word;
+    // // singleline.content.getElementById("translation_content").innerText=batch[i].translation;
+    // // document.getElementById("kkk").appendChild(singleline.content.cloneNode(true));
+    // alert(singleline.content.getElementById("word_content").innerText)
+
+    // alert("AS打算");
 }
