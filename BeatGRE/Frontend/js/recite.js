@@ -31,6 +31,10 @@ function showWord() {
             console.log(ob.result);
             console.log(ob.worddata.wordbatch);
             var batch=ob.worddata.wordbatch;
+            console.log(ob.word_batch);
+            console.log(ob.task);
+            localStorage.setItem('word_batch',ob.word_batch);
+            localStorage.setItem('task',ob.task);
 
             // var dialog = document.querySelector('#kkk');
             for (var i = 0; i < batch.length; i++) {
@@ -66,47 +70,59 @@ function showWord() {
 
 }
 function nextpage() {
-    $.ajax({url:'http://localhost:5222/recite/nextpage',
-        processData: false,
-        cache:false,
-        contentType: "application/json; charset=utf-8",
-        data:'&'+localStorage["user_name"],
-        datatype: "json",
-        type: 'get',
-        success: function (res) {
-            var str=  res ;
-            var ob=JSON.parse(str) ;
-            if (ob.result=="error"){
-                alert("您已完成今天的任务，休息一下吧~");
-            }else window.location.reload();
-            // alert("Next page");
-        },
-        error:function (res) {
-            alert("未知错误!");
-        }
+    if (localStorage.getItem("has_done")<Number(localStorage.getItem("task"))-Number(localStorage.getItem("word_batch"))){
+        var new_value =Number(localStorage.getItem("has_done"))+Number(localStorage.getItem("word_batch"));
+        localStorage.setItem('has_done',new_value);
+        alert(localStorage.has_done);
+        console.log("hasdone:"+localStorage.has_done);
+        $.ajax({url:'http://localhost:5222/recite/nextpage',
+            processData: false,
+            cache:false,
+            contentType: "application/json; charset=utf-8",
+            data:'&'+localStorage["user_name"],
+            datatype: "json",
+            type: 'get',
+            success: function (res) {
+                // var str=  res ;
+                // var ob=JSON.parse(str) ;
+                window.location.reload();
+            },
+            error:function (res) {
+                alert("未知错误!");
+            }
 
-    })
+        })
+    } else {
+        console.log("hasdone:"+localStorage.has_done);
+        alert("您已完成今天的任务，休息一下吧 嘿嘿~");
+    }
+
+
 
 }
 function backpage() {
-    $.ajax({url:'http://localhost:5222/recite/backpage',
-        processData: false,
-        cache:false,
-        contentType: "application/json; charset=utf-8",
-        data:'&'+localStorage["user_name"],
-        datatype: "json",
-        type: 'get',
-        success: function (res) {
-            var str=  res ;
-            var ob=JSON.parse(str) ;
-            if (ob.result=="error"){
-                alert("不能再向前啦~");
-            }else window.location.reload();
-        },
-        error:function (res) {
-            alert("未知错误!");
-        }
+    if (localStorage.getItem("has_done")>0){
+        var new_value =Number(localStorage.getItem("has_done"))-Number(localStorage.getItem("word_batch"));
+        localStorage.setItem('has_done',new_value);
+        $.ajax({url:'http://localhost:5222/recite/backpage',
+            processData: false,
+            cache:false,
+            contentType: "application/json; charset=utf-8",
+            data:'&'+localStorage["user_name"],
+            datatype: "json",
+            type: 'get',
+            success: function (res) {
+               window.location.reload();
+            },
+            error:function (res) {
+                alert("未知错误!");
+            }
 
-    })
+        })
+    }else{
+        console.log("hasdone:"+localStorage.getItem("has_done"));
+        alert("不能再向前啦 嘿嘿~");
+    }
+
 
 }

@@ -152,8 +152,10 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
  <script>
-     var value = localStorage["user_name"];
+     var value = localStorage.getItem("user_name");
      document.getElementById("user_name").innerText=value;
+
+     localStorage.setItem('has_done',0);
      alert(value);
  </script>
 

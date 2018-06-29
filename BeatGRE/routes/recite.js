@@ -6,11 +6,9 @@ var connection = require('../dbhelper');
 
 var file = './word_list/gre_list.json';
 var request = JSON.parse(fs.readFileSync(file));
-var hasRemembered=0 ;
+// var hasRemembered ;
 router.get('/', function(req, res, next) {
-
-
-    // var value = localStorage["user_name"];
+    //
 
     var kk = req.url;
     var temp = kk.split('&');
@@ -59,7 +57,7 @@ router.get('/', function(req, res, next) {
                 // console.log('{"result" : "success", "data" :' +JSON.stringify(response)+'}')
                 var test = JSON.parse('{"result" : "success", "worddata" :' +(response)+'}');
                 console.log(test.result);
-                res.end('{"result" : "success", "worddata" :' +(response)+'}');
+                res.end('{"result" : "success", "word_batch" : '+wordbatch+',"task" : '+task+',"worddata" :' +(response)+'}');
             }
         });
 
@@ -89,21 +87,15 @@ router.get('/nextpage', function(req, res, next) {
                 wordbatch = result[0].word_batch;
                 done_num = result[0].done_num;
                 task = result[0].daily_task;
-                console.log("wtf"+task);
+                console.log("wtf");
                 console.log("done_num:"+done_num);
                 console.log("wordbatch:"+wordbatch);
-                hasRemembered+=wordbatch;
-                console.log("has done:"+hasRemembered);
 
-                if (hasRemembered<task){
-                    console.log("what?");
-                    connection.query(
-                        'UPDATE '+user_name+'_setting'+' SET done_num=done_num+'+wordbatch+' where book_id=1;',function (err,result) {
-                            res.end('{"result" : "success", "worddata" :' +'"renew" }');
-                        }
-                    );
-                }else res.end('{"result" : "error", "worddata" :' +'"next_to_end" }');
-
+                connection.query(
+                    'UPDATE '+user_name+'_setting'+' SET done_num=done_num+'+wordbatch+' where book_id=1;',function (err,result) {
+                        res.end('{"result" : "success", "worddata" :' +'"renew" }');
+                    }
+                );
             }
         });
 
@@ -129,15 +121,11 @@ router.get('/backpage', function(req, res, next) {
                 wordbatch = result[0].word_batch;
                 done_num = result[0].done_num;
                 task = result[0].daily_task;
-                hasRemembered-=wordbatch;
-                if (hasRemembered>0){
-                    connection.query(
-                        'UPDATE '+user_name+'_setting'+' SET done_num=done_num-'+wordbatch+' where book_id=1;',function (err,result) {
-                            res.end('{"result" : "success", "worddata" :' +'"renew" }');
-                        }
-                    );
-                }else res.end('{"result" : "error", "worddata" :' +'"back_to_front" }');
-
+                connection.query(
+                    'UPDATE '+user_name+'_setting'+' SET done_num=done_num-'+wordbatch+' where book_id=1;',function (err,result) {
+                        res.end('{"result" : "success", "worddata" :' +'"renew" }');
+                    }
+                );
             }
         });
 

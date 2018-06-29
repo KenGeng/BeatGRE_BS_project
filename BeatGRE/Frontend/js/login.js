@@ -39,7 +39,7 @@ function login(user_name_email, password){
                     alert("登陆成功！欢迎!");
                     if (window.localStorage) {
                         //存储变量的值
-                        localStorage.user_name = user_name_email.value;//must add value!!
+                        localStorage.setItem('user_name',user_name_email.value) ;//must add value!!
                         window.location.href = 'userface.html';
                     } else {
                         alert("NOT SUPPORT");
