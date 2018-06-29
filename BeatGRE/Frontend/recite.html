@@ -38,6 +38,7 @@
 </div>
 
 
+
 <div class="container">
 
 
@@ -47,7 +48,7 @@
             <div class="col center-align s6 m6 offset-m3" id="kkk" >
                 <br><br>
 
-                <!--<ul class="collapsible" data-collapsible="accordion">-->
+                <!--<ul class="collapsible " data-collapsible="accordion">-->
                     <!--<li>-->
                         <!--<div class="collapsible-header">-->
                             <!--<i class="material-icons">filter_drama</i>-->
@@ -58,38 +59,16 @@
                         <!--<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>-->
                     <!--</li>-->
                 <!--</ul>-->
-                <!--<ul class="collapsible ">-->
-                    <!--<li>-->
-                        <!--<div class="collapsible-header">-->
-                            <!--<i class="material-icons">filter_drama</i>-->
-                            <!--First1-->
-                            <!--<span class="badge light-green-text">add</span>-->
-                            <!--<span class="badge light-green-text">check</span>-->
-                        <!--</div>-->
-                        <!--<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <!--<ul class="collapsible ">-->
-                    <!--<li >-->
-                        <!--<div class="collapsible-header">-->
-                            <!--<i class="material-icons">filter_drama</i>-->
-                            <!--First2-->
-                            <!--<span class="badge light-green-text">add</span>-->
-                            <!--<span class="badge light-green-text">check</span>-->
-                        <!--</div>-->
-                        <!--<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <template id="dialog_tpl">
+                <template id="word_expandable">
                     <ul class="collapsible " data-collapsible="accordion">
                         <li >
                             <div class="collapsible-header">
                                 <i class="material-icons">filter_drama</i>
-                                <span id="asd"></span>
+                                <span id="word_content"></span>
                                 <span class="badge light-green-text">add</span>
                                 <span class="badge light-green-text">check</span>
                             </div>
-                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            <div class="collapsible-body"><p id="translation_content"></p></div>
                         </li>
                     </ul>
                 </template>
@@ -143,9 +122,8 @@
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+
 <script src="js/recite.js"></script>
-
-
+<script src="js/init.js"></script>
 </body>
 </html>
