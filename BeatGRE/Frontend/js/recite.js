@@ -66,3 +66,39 @@ function showWord() {
     })
 
 }
+function nextpage() {
+    $.ajax({url:'http://localhost:5222/recite/nextpage',
+        processData: false,
+        cache:false,
+        contentType: "application/json; charset=utf-8",
+        data:'&'+localStorage["user_name"],
+        datatype: "json",
+        type: 'get',
+        success: function (res) {
+            alert("Next page");
+        },
+        error:function (res) {
+            alert("未知错误!");
+        }
+
+    })
+
+}
+function backpage() {
+    $.ajax({url:'http://localhost:5222/recite/backpage',
+        processData: false,
+        cache:false,
+        contentType: "application/json; charset=utf-8",
+        data:'&'+localStorage["user_name"],
+        datatype: "json",
+        type: 'get',
+        success: function (res) {
+            alert("back page");
+        },
+        error:function (res) {
+            alert("未知错误!");
+        }
+
+    })
+
+}

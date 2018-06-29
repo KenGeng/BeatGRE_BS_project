@@ -70,7 +70,71 @@ router.get('/', function(req, res, next) {
 
 
 });
+router.get('/nextpage', function(req, res, next) {
 
+    var kk = req.url;
+    var temp = kk.split('&');
+
+    var user_name = temp[1];
+    console.log(user_name);
+
+    connection.query(
+        'select word_batch,daily_task,done_num  from '+user_name+'_setting where book_id = 1 ',function(err, result) {
+            console.log("sql res len:"+result.length);
+            if (result.length==0){
+                console.log("fuck!");
+                throw err;
+            }else{
+                var wordbatch = 5;
+                var done_num = 10;
+                var task = 49;
+                wordbatch = result[0].word_batch;
+                done_num = result[0].done_num;
+                task = result[0].daily_task;
+                console.log("wtf");
+                console.log("done_num:"+done_num);
+                console.log("wordbatch:"+wordbatch);
+
+
+                connection.query(
+                    'UPDATE '+user_name+'_setting'+' SET done_num=done_num+'+wordbatch+' where book_id=1;',function (err,result) {
+                        res.end('{"result" : "success", "worddata" :' +'"renew" }');
+                    }
+                );
+            }
+        });
+
+});
+router.get('/backpage', function(req, res, next) {
+
+    var kk = req.url;
+    var temp = kk.split('&');
+
+    var user_name = temp[1];
+    console.log(user_name);
+
+    connection.query(
+        'select word_batch,daily_task,done_num  from '+user_name+'_setting where book_id = 1 ',function(err, result) {
+            console.log("sql res len:"+result.length);
+            if (result.length==0){
+                console.log("fuck!");
+                throw err;
+            }else{
+                var wordbatch = 5;
+                var done_num = 10;
+                var task = 49;
+                wordbatch = result[0].word_batch;
+                done_num = result[0].done_num;
+                task = result[0].daily_task;
+                connection.query(
+                    'UPDATE '+user_name+'_setting'+' SET done_num=done_num-'+wordbatch+' where book_id=1;',function (err,result) {
+                        res.end('{"result" : "success", "worddata" :' +'"renew" }');
+                    }
+                );
+            }
+        });
+
+});
 
 
 module.exports = router;
