@@ -33,7 +33,7 @@ function showWord() {
             var batch=ob.worddata.wordbatch;
 
             // var dialog = document.querySelector('#kkk');
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < batch.length; i++) {
 
                 // var inhtml ='<ul class="collapsible expandable">';
                 // inhtml+='<li class>';
@@ -48,7 +48,6 @@ function showWord() {
                 // inhtml+=' </ul>';
                 //
                 // dialog.innerHTML+=inhtml;
-
                 // dialog.content.getElementById("word_content").innerHTML=batch[i].word;
                // dialog.content.getElementById("translation").innerHTML=batch[i].translation;
                 var singleline = document.querySelector("#word_expandable");
@@ -75,7 +74,12 @@ function nextpage() {
         datatype: "json",
         type: 'get',
         success: function (res) {
-            alert("Next page");
+            var str=  res ;
+            var ob=JSON.parse(str) ;
+            if (ob.result=="error"){
+                alert("您已完成今天的任务，休息一下吧~");
+            }else window.location.reload();
+            // alert("Next page");
         },
         error:function (res) {
             alert("未知错误!");
@@ -93,7 +97,11 @@ function backpage() {
         datatype: "json",
         type: 'get',
         success: function (res) {
-            alert("back page");
+            var str=  res ;
+            var ob=JSON.parse(str) ;
+            if (ob.result=="error"){
+                alert("不能再向前啦~");
+            }else window.location.reload();
         },
         error:function (res) {
             alert("未知错误!");
