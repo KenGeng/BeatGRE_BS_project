@@ -55,10 +55,11 @@ app.all('*',function (req, res, next) {
 });
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var reciteRouter =require('./routes/recite');
 // var registerRouter = require('./routes/register');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/recite',reciteRouter);
 // app.use('/register', registerRouter);
 
 //register handler
