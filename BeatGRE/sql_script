@@ -32,4 +32,11 @@ create table user_setting(
     daily_task int DEFAULT 49,
     done int DEFAULT 0,
      primary key(setting_id)
-)
+);
+create table word_book(
+    word_id int NOT NULL AUTO_INCREMENT,
+    word varchar(30) ,
+    translation varchar(200),
+    primary key(word_id)
+
+);
