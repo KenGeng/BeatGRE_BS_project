@@ -55,6 +55,7 @@ app.all('*',function (req, res, next) {
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var reciteRouter =require('./routes/recite');
+var reviewRouter =require('./routes/review');
 
 var diywordRouter =require('./routes/diyword');
 // var registerRouter = require('./routes/register');
@@ -62,6 +63,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/recite',reciteRouter);
 app.use('/diyword',diywordRouter);
+app.use('/review',reviewRouter);
 // app.use('/register', registerRouter);
 
 //register handler

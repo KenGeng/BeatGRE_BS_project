@@ -10,6 +10,11 @@
 
     });
 
+
+    // document.getElementById("kkk").addEventListener('click', function() {
+    //
+    // });
+
 })(jQuery); // end of jQuery name space
 function showWord() {
 
@@ -22,24 +27,22 @@ function showWord() {
         type: 'get',
         success: function (res) {
             console.log(res);
+            console.log('dsa');
             var str=  res ;
             var ob=JSON.parse(str) ;
-            console.log(ob.result);
-            console.log(ob.worddata.wordbatch);
             var batch=ob.worddata.wordbatch;
-            console.log(ob.word_batch);
-            console.log(ob.task);
             localStorage.setItem('word_batch',ob.word_batch);
             localStorage.setItem('task',ob.task);
 
             for (var i = 0; i < batch.length; i++) {
+
 
                 var singleline = document.querySelector("#word_expandable");
                 singleline.content.getElementById("word_content").innerText=batch[i].word;
                 singleline.content.getElementById("translation_content").innerText=batch[i].translation;
                 document.getElementById("kkk").appendChild(singleline.content.cloneNode(true));
             }
-            $('.collapsible').collapsible();//一行代码 花了7个小时 哎
+            $('.collapsible').collapsible();
             for (var i = 0; i < batch.length; i++) {
                 document.getElementById("kkk").children[3+i].querySelector('input').addEventListener('click',function () {
                     var word = this.parentElement.parentElement.children[0].children.namedItem("word_content").innerHTML;
@@ -61,6 +64,9 @@ function showWord() {
 
                     })
 
+
+
+
                 });
             }
 
@@ -79,7 +85,7 @@ function nextpage() {
         localStorage.setItem('has_done',new_value);
         alert(localStorage.has_done);
         console.log("hasdone:"+localStorage.has_done);
-        $.ajax({url:'http://localhost:5222/review/nextpage',
+        $.ajax({url:'http://localhost:5222/recite/nextpage',
             processData: false,
             cache:false,
             contentType: "application/json; charset=utf-8",
@@ -96,7 +102,7 @@ function nextpage() {
         })
     } else {
         console.log("hasdone:"+localStorage.has_done);
-        alert("复习完毕，休息一下吧 嘿嘿~");
+        alert("您已完成今天的复习，休息一下吧 嘿嘿~");
     }
 
 
@@ -106,7 +112,7 @@ function backpage() {
     if (localStorage.getItem("has_done")>0){
         var new_value =Number(localStorage.getItem("has_done"))-Number(localStorage.getItem("word_batch"));
         localStorage.setItem('has_done',new_value);
-        $.ajax({url:'http://localhost:5222/review/backpage',
+        $.ajax({url:'http://localhost:5222/recite/backpage',
             processData: false,
             cache:false,
             contentType: "application/json; charset=utf-8",

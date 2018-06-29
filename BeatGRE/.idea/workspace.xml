@@ -26,7 +26,7 @@
       <file leaf-file-name="review.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/review.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
+            <state relative-caret-position="1080">
               <caret line="72" column="102" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="102" />
             </state>
           </provider>
@@ -35,8 +35,8 @@
       <file leaf-file-name="review.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/js/review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+            <state relative-caret-position="1560">
+              <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -44,26 +44,26 @@
       <file leaf-file-name="review.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="-624">
+              <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recite.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/recite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="173" column="83" selection-start-line="173" selection-start-column="83" selection-end-line="173" selection-end-column="83" />
+            <state relative-caret-position="69">
+              <caret line="73" column="76" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userface.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userface.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="63" column="51" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="51" />
+            <state relative-caret-position="161">
+              <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,7 @@
       <file leaf-file-name="diyword.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/diyword.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="1737">
               <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="49" />
             </state>
           </provider>
@@ -89,8 +89,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+            <state relative-caret-position="144">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -98,8 +98,8 @@
       <file leaf-file-name="recite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="150">
+              <caret line="10" column="7" lean-forward="true" selection-end-line="163" />
             </state>
           </provider>
         </entry>
@@ -115,8 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sett</find>
-      <find>asd</find>
       <find>expandable</find>
       <find>点击进入</find>
       <find>ken</find>
@@ -124,7 +122,7 @@
       <find>wordpatch</find>
       <find>batch</find>
       <find>wordpa</find>
-      <find>error la</find>
+      <find />
       <find>oncli</find>
       <find>locals</find>
       <find>local</find>
@@ -140,10 +138,12 @@
       <find>go</find>
       <find>le</find>
       <find>study</find>
-      <find>orange</find>
-      <find>green</find>
-      <find>diy</find>
       <find>fuck</find>
+      <find>green</find>
+      <find>recite</find>
+      <find>patch</find>
+      <find>diy</find>
+      <find>orange</find>
       <find>register</find>
     </findStrings>
     <replaceStrings>
@@ -173,8 +173,6 @@
         <option value="$PROJECT_DIR$/dbhelper.js" />
         <option value="$PROJECT_DIR$/Frontend/js/init.js" />
         <option value="$PROJECT_DIR$/Frontend/js/login.js" />
-        <option value="$PROJECT_DIR$/Frontend/userface.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/Frontend/js/recite.js" />
         <option value="$PROJECT_DIR$/routes/diyword.js" />
         <option value="$PROJECT_DIR$/Frontend/js/diyword.js" />
@@ -182,12 +180,14 @@
         <option value="$PROJECT_DIR$/Frontend/recite.html" />
         <option value="$PROJECT_DIR$/Frontend/diyword.html" />
         <option value="$PROJECT_DIR$/Frontend/review.html" />
-        <option value="$PROJECT_DIR$/Frontend/js/review.js" />
         <option value="$PROJECT_DIR$/word_list/xls2json.js" />
-        <option value="$PROJECT_DIR$/routes/review.js" />
         <option value="$PROJECT_DIR$/sql_script" />
         <option value="$PROJECT_DIR$/saveList2Database.js" />
         <option value="$PROJECT_DIR$/routes/recite.js" />
+        <option value="$PROJECT_DIR$/routes/review.js" />
+        <option value="$PROJECT_DIR$/Frontend/js/review.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/Frontend/userface.html" />
       </list>
     </option>
   </component>
@@ -208,7 +208,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
+    <option name="x" value="18" />
     <option name="y" value="37" />
     <option name="width" value="1440" />
     <option name="height" value="837" />
@@ -297,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.userface.html">
+  <component name="RunManager" selected="Node.js.app.js">
     <configuration name="home.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/home.html" />
     <configuration name="recite.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/recite.html" />
     <configuration name="userface.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/userface.html" />
@@ -334,15 +334,15 @@
       <updated>1530027187808</updated>
       <workItem from="1530027189112" duration="21371000" />
       <workItem from="1530088412519" duration="26199000" />
-      <workItem from="1530154846487" duration="68979000" />
+      <workItem from="1530154846487" duration="70467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116549000" />
+    <option name="totallyTimeSpent" value="118037000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="37" width="1440" height="837" extended-state="0" />
+    <frame x="18" y="37" width="1440" height="837" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14375" />
@@ -644,20 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/review.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="72" column="102" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/js/review.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql_script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -672,24 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/diyword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saveList2Database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -700,31 +672,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
+    <entry file="file://$PROJECT_DIR$/routes/diyword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/review.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="1737">
+          <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/recite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="173" column="83" selection-start-line="173" selection-start-column="83" selection-end-line="173" selection-end-column="83" />
+        <state relative-caret-position="69">
+          <caret line="73" column="76" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-624">
+          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/js/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="102" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
         </state>
       </provider>
     </entry>
