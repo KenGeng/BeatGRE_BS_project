@@ -15,7 +15,7 @@
  <nav class="light-green lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Beat GRE!</a>
       <ul class="right hide-on-med-and-down">
-        <li class="tab disabled">Hi,ken</li>
+        <li class="tab disabled">Hi,<span id="user_name"></span></li>
         <li><a href="#">Setting</a></li>
       </ul>
 
@@ -151,6 +151,11 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+ <script>
+     var value = localStorage["user_name"];
+     document.getElementById("user_name").innerText=value;
+     alert(value);
+ </script>
 
 
   </body>

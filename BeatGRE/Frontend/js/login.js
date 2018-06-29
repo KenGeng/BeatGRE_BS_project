@@ -37,7 +37,15 @@ function login(user_name_email, password){
                     alert("密码错误!");
                 } else{
                     alert("登陆成功！欢迎!");
-                    window.location.href = 'userface.html';
+                    if (window.localStorage) {
+                        //存储变量的值
+                        localStorage.user_name = user_name_email.value;//must add value!!
+                        window.location.href = 'userface.html';
+                    } else {
+                        alert("NOT SUPPORT");
+                    }
+
+
                 }
 
 

@@ -103,15 +103,15 @@ app.post('/register', function (req, res) {
                                 //     book_id int DEFAULT 1 ,
                                 //     word_batch int DEFAULT 7,
                                 //     daily_task int DEFAULT 49,
-                                //     done int DEFAULT 0,
+                                //     done_num int DEFAULT 0,
                                 //     primary key(setting_id)
                                 //  );
 
-                                connection.query('create table  '+user.user_name+'_setting (setting_id int NOT NULL AUTO_INCREMENT, book_id int DEFAULT 1 ,word_batch int DEFAULT 7,daily_task int DEFAULT 49,done int DEFAULT 0,primary key(setting_id) )',function (err,rs) {
+                                connection.query('create table  '+user.user_name+'_setting (setting_id int NOT NULL AUTO_INCREMENT, book_id int DEFAULT 1 ,word_batch int DEFAULT 7,daily_task int DEFAULT 49,done_num int DEFAULT 0,primary key(setting_id) )',function (err,rs) {
                                     if (err) throw  err;
                                     console.log('user_setting table has been written to database\n');
                                 });
-                                var initial_setting ={book_id:1,word_batch:10,daily_task:49,done:0};
+                                var initial_setting ={book_id:1,word_batch:10,daily_task:49,done_num:0};
                                 connection.query('INSERT INTO '+user.user_name+'_setting set ?',initial_setting,function (err,rs) {
                                     if (err) throw  err;
                                     console.log('initial setting table has been written to database\n');
@@ -157,7 +157,7 @@ app.post('/login', function (req, res){
                 console.log(user.password);
                 if (result[0].password ===user.password ) {
                     console.log("???");
-                    res.end('{"result" : "success", "status" : 200}');
+                    res.end('{"result" : "success", "user_name" : '+'\"'+user.user_name_email+'\" }');//为了符合json的格式，要加双引号
                 }else res.end('{"result" : "wrong_password", "status" : 200}');
             }else{
                 //check email

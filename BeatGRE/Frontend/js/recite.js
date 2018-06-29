@@ -5,6 +5,8 @@
             accordion : true
         });
         showWord();
+        var value = localStorage["user_name"];
+        document.getElementById("user_name").innerText=value;
     });
 
     // document.addEventListener('DOMContentLoaded', function() {
@@ -18,7 +20,7 @@ function showWord() {
         processData: false,
         cache:false,
         contentType: "application/json; charset=utf-8",
-        // data:data,
+        data:'&'+localStorage["user_name"],
         datatype: "json",
         type: 'get',
         success: function (res) {
@@ -27,8 +29,8 @@ function showWord() {
             var str=  res ;
             var ob=JSON.parse(str) ;
             console.log(ob.result);
-            console.log(ob.worddata.wordpatch);
-            var batch=ob.worddata.wordpatch;
+            console.log(ob.worddata.wordbatch);
+            var batch=ob.worddata.wordbatch;
 
             // var dialog = document.querySelector('#kkk');
             for (var i = 0; i < 10; i++) {
