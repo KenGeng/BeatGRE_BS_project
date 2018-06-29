@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="diyword.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="diyword.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/diyword.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="59">
+              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -26,8 +26,26 @@
       <file leaf-file-name="diyword.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/js/diyword.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="178">
+              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/review.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="72" column="102" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/js/review.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -44,8 +62,8 @@
       <file leaf-file-name="userface.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="98" column="58" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
+            <state relative-caret-position="177">
+              <caret line="63" column="51" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -62,8 +80,20 @@
       <file leaf-file-name="recite.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/recite.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="75" lean-forward="true" selection-end-line="132" />
+            <state relative-caret-position="262">
+              <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="166">
+                <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -71,38 +101,8 @@
       <file leaf-file-name="recite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="101" column="102" lean-forward="true" selection-start-line="99" selection-start-column="27" selection-end-line="101" selection-end-column="102" />
-              <folding>
-                <element signature="e#5190#7038#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/js/register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="32">
+              <caret line="34" column="44" lean-forward="true" selection-end-line="163" />
             </state>
           </provider>
         </entry>
@@ -118,10 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>off</find>
-      <find>h1</find>
-      <find>h2</find>
-      <find>test</find>
       <find>测试</find>
       <find>aler</find>
       <find>sett</find>
@@ -133,7 +129,7 @@
       <find>wordpatch</find>
       <find>batch</find>
       <find>wordpa</find>
-      <find>error la</find>
+      <find />
       <find>oncli</find>
       <find>locals</find>
       <find>local</find>
@@ -146,8 +142,12 @@
       <find>单词本</find>
       <find>insert</find>
       <find>temp</find>
+      <find>go</find>
       <find>le</find>
       <find>diy</find>
+      <find>study</find>
+      <find>green</find>
+      <find>orange</find>
     </findStrings>
     <replaceStrings>
       <replace>wordbatch</replace>
@@ -176,16 +176,18 @@
         <option value="$PROJECT_DIR$/sql_script" />
         <option value="$PROJECT_DIR$/dbhelper.js" />
         <option value="$PROJECT_DIR$/Frontend/js/init.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Frontend/js/login.js" />
         <option value="$PROJECT_DIR$/Frontend/userface.html" />
         <option value="$PROJECT_DIR$/routes/recite.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/Frontend/recite.html" />
         <option value="$PROJECT_DIR$/Frontend/js/recite.js" />
-        <option value="$PROJECT_DIR$/Frontend/diyword.html" />
         <option value="$PROJECT_DIR$/routes/diyword.js" />
         <option value="$PROJECT_DIR$/Frontend/js/diyword.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Frontend/recite.html" />
+        <option value="$PROJECT_DIR$/Frontend/diyword.html" />
+        <option value="$PROJECT_DIR$/Frontend/review.html" />
+        <option value="$PROJECT_DIR$/Frontend/js/review.js" />
       </list>
     </option>
   </component>
@@ -288,28 +290,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.diyword.html">
+  <component name="RunManager" selected="JavaScript Debug.review.html">
     <configuration name="diyword.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/diyword.html" />
     <configuration name="recite.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/recite.html" />
     <configuration name="register.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/register.html" />
-    <configuration name="userface.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/userface.html" />
+    <configuration name="review.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BeatGRE/Frontend/review.html" />
     <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$" />
     <configuration name="register.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="register.js" working-dir="$PROJECT_DIR$/Frontend/js" />
     <list>
       <item itemvalue="Node.js.app.js" />
       <item itemvalue="JavaScript Debug.recite.html" />
-      <item itemvalue="JavaScript Debug.userface.html" />
       <item itemvalue="JavaScript Debug.register.html" />
       <item itemvalue="Node.js.register.js" />
       <item itemvalue="JavaScript Debug.diyword.html" />
+      <item itemvalue="JavaScript Debug.review.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.review.html" />
         <item itemvalue="JavaScript Debug.diyword.html" />
         <item itemvalue="JavaScript Debug.register.html" />
         <item itemvalue="Node.js.register.js" />
         <item itemvalue="JavaScript Debug.recite.html" />
-        <item itemvalue="JavaScript Debug.userface.html" />
       </list>
     </recent_temporary>
   </component>
@@ -325,12 +327,12 @@
       <updated>1530027187808</updated>
       <workItem from="1530027189112" duration="21371000" />
       <workItem from="1530088412519" duration="26199000" />
-      <workItem from="1530154846487" duration="60772000" />
+      <workItem from="1530154846487" duration="62414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108342000" />
+    <option name="totallyTimeSpent" value="109984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="37" width="1440" height="837" extended-state="0" />
@@ -363,20 +365,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" selection-end-line="102" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2115">
@@ -639,16 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -673,24 +651,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/recite.html">
+    <entry file="file://$PROJECT_DIR$/routes/diyword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="75" lean-forward="true" selection-end-line="132" />
+        <state relative-caret-position="537">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="41" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="98" column="58" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="166">
+            <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
+    <entry file="file://$PROJECT_DIR$/Frontend/js/diyword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        <state relative-caret-position="178">
+          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -701,24 +682,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/diyword.js">
+    <entry file="file://$PROJECT_DIR$/Frontend/recite.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/js/diyword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="262">
+          <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/diyword.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="59">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/js/recite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="34" column="44" lean-forward="true" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/userface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="63" column="51" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="72" column="102" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/js/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
         </state>
       </provider>
     </entry>
