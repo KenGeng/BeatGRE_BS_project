@@ -6,14 +6,7 @@ var express = require('express');
 //connect database first; mysql
 var path = require('path');
 //
-// var connection = mysql.createConnection({
-//     host     : 'localhost',
-//     user     : 'root',
-//     password : 'gengbiao',
-//     database : 'beatgre_db'
-// });
-//
-// connection.connect();
+
 
 var connection = require('./dbhelper');
 var path = require('path');
@@ -56,6 +49,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var reciteRouter =require('./routes/recite');
 var reviewRouter =require('./routes/review');
+var testRouter = require('./routes/test');
 
 var diywordRouter =require('./routes/diyword');
 // var registerRouter = require('./routes/register');
@@ -64,7 +58,8 @@ app.use('/users', usersRouter);
 app.use('/recite',reciteRouter);
 app.use('/diyword',diywordRouter);
 app.use('/review',reviewRouter);
-// app.use('/register', registerRouter);
+app.use('/test',testRouter);
+
 
 //register handler
 app.post('/register', function (req, res) {

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+<nav class="light-green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Beat GRE!</a>
+        <ul class="right hide-on-med-and-down">
+            <li class="tab disabled">Hi,<span id="user_name"></span></li>
+            <li><a href="userface.html">返回主页</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Hi, ken</a></li>
+            <li><a href="#">返回主页</a></li>
+
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+
+</nav>
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+
+        <h3 class="header center orange-text ">Fighting.</h3>
+
+    </div>
+
+</div>
+<div class="section no-pad-bot" >
+    <div class="container">
+
+        <h6 class="header center bule-text ">本次测试，您已经做了 <span class="blue-grey-text" id="test_counter"></span> 题. 正确率为<span class="red-text" id="test_percent"></span></h6>
+
+    </div>
+
+</div>
+
+
+
+<div class="container">
+
+
+    <!--   Icon Section   -->
+    <div class="row ">
+        <div class="col s12 m12">
+            <div class="col center-align s6 m6 offset-m3" id="kkk" >
+                <br><br>
+                <ul class="collapsible center-align">
+                    <li id="itemheader">
+                        <div class="collapsible-header"></div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li id="item1" >
+                        <div class="collapsible-header"></div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li id="item2">
+                        <div class="collapsible-header"></div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li id="item3">
+                        <div class="collapsible-header"></div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li id="item4">
+                        <div class="collapsible-header"></div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+
+
+
+            </div>
+            <div class="col  s6 m6 offset-m3 ">
+                <br>
+                <div class="row center">
+                    <div class="col center s12 m12 ">
+                        <input type="submit" id="next-page-button" class="btn-small waves-light green" value="下一题" onclick="localStorage.test_counter=Number(localStorage.test_counter)+1;window.location.reload(); "/>
+                        <!--<a class="black-text" href="#">下一页</a>-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</div>
+
+<footer class="page-footer grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="https://github.com/KenGeng">3150105222 耿飙</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+
+<script src="js/test.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
