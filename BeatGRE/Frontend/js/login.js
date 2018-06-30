@@ -15,7 +15,6 @@ function login(user_name_email, password){
 
 
     if (checkInfo(user_name_email,password)==true){
-        alert('select_link clicked');
         var data = {"user_name_email":user_name_email.value,"password":password.value};
 
         $.ajax({url:'http://localhost:5222/login',

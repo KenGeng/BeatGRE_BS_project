@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : 'gengbiao',
-    database : 'beatgre_db'
+    database : 'beatgre_db1'
 });
 
 connection.connect();

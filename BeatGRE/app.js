@@ -227,7 +227,22 @@ app.post('/wordbook_setting', function (req, res) {
         'UPDATE user_info SET cur_book='+data.book_id+' where user_name = "'+data.user_name+'";',
         function(err, result) {
             console.log("aaaa");
-            res.end('{"result" : "success", "status" : 200}');
+            connection.query('select '+'book_id'+' from '+data.user_name+'_setting'+' where book_id = '+data.book_id+';',function(err, result){
+                console.log(result.length+'opopopop');
+                if (result.length==0){
+                    connection.query(
+                        'insert into '+data.user_name+'_setting  (book_id) values ('+data.book_id+');',
+                        function(err, result) {
+                            if (err);
+                            res.end('{"result" : "success", "status" : 200}');
+                        });
+                } else {
+                    res.end('{"result" : "success", "status" : 200}');
+                }
+            });
+
+
+
         });
 
 });

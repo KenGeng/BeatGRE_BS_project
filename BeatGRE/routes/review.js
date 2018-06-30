@@ -66,18 +66,23 @@ router.get('/', function(req, res, next) {
 
                                 var response = '{"wordbatch": [ ';
                                 //记忆曲线
-                                if (done_num>2*task){
-                                    for (let i = 0; i < wordbatch*2/3; i++) {
+                                if (done_num>3*task){
+                                    for (let i = 0; i < wordbatch*2/3-3; i++) {
                                         var index = Math.round(Math.random()*task+done_num-task);
                                         response+='{"word":"'+GRE_List[index].word+'",';
                                         response+='"translation":"'+GRE_List[index].translation+'"},';
                                     }
-                                    for (let i = wordbatch*2/3; i < wordbatch-1; i++) {
+                                    for (let i = wordbatch*2/3; i < wordbatch-2; i++) {
                                         var index = Math.round(Math.random()*task+done_num-2*task);
                                         response+='{"word":"'+GRE_List[index].word+'",';
                                         response+='"translation":"'+GRE_List[index].translation+'"},';
                                     }
-                                    var index = Math.round(Math.random()*task+done_num-2*task);
+                                    for (let i = 0; i < 4; i++) {
+                                        var index = Math.round(Math.random()*done_num);
+                                        response+='{"word":"'+GRE_List[index].word+'",';
+                                        response+='"translation":"'+GRE_List[index].translation+'"},';
+                                    }
+                                    var index = Math.round(Math.random()*done_num);
                                     response+='{"word":"'+GRE_List[index].word+'",';
                                     response+='"translation":"'+GRE_List[index].translation+'"}';
                                 }else{

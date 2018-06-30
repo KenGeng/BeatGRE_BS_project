@@ -77,7 +77,7 @@ function nextpage() {
     if (localStorage.getItem("has_done")<Number(localStorage.getItem("task"))-Number(localStorage.getItem("word_batch"))){
         var new_value =Number(localStorage.getItem("has_done"))+Number(localStorage.getItem("word_batch"));
         localStorage.setItem('has_done',new_value);
-        alert(localStorage.has_done);
+        // alert(localStorage.has_done);
         console.log("hasdone:"+localStorage.has_done);
         $.ajax({url:'http://localhost:5222/recite/nextpage',
             processData: false,

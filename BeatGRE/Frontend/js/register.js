@@ -30,7 +30,7 @@ function register(username, password, email){
         //     a=1;
         // }
     if (checkInfo(username,password,email)==true){
-        alert('select_link clicked');
+
         // var username = $("#username").val();
         // var password = $("#password").val();
         // var email = $("#email").val();
