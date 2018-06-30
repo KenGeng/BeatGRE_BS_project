@@ -3,47 +3,53 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Sign In</title>
+    <title>Starter Template - Materialize</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/normalstyle.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+
 <nav class="light-green lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Beat GRE!</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
+            <li class="tab disabled">Hi,<span id="user_name"></span></li>
+            <li><a href="userface.html">返回主页</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
+            <li><a href="#">Hi, ken</a></li>
+            <li><a href="#">Setting</a></li>
+
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
+
 </nav>
+
+
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
         <br><br>
-        <h1 class="header center orange-text normal " >Sign In</h1>
+        <h1 class="header center indigo-text lighten-1 " >计划设置</h1>
 
         <div class="row center">
             <div class="input-field col s6 offset-s3 ">
-                <i class="material-icons prefix">account_circle</i>
-                <input placeholder="input your user name or email address" id="user_name_email" type="text" name="user_name_email" class="validate">
-                <!--<label for="username">username</label>-->
+                <input id="task" type="number" name="task" class="validate">
+                <label for="task">How many words a day?</label>
             </div>
         </div>
         <div class="row center">
             <div class="input-field col s6 offset-s3">
-                <i class="material-icons prefix">content_paste</i>
-                <input placeholder="input your user password" id="password" type="password" name="password" class="validate">
+                <input id="word_batch" type="number" name="word_batch" class="validate">
+                <label for="word_batch">How many words a page?</label>
                 <!--<label for="password">password</label>-->
             </div>
         </div>
         <div class="row center">
-            <input type="submit" id="login-button" class="btn-large waves-effect waves-light orange" value="confirm" onclick="login(user_name_email, password);"/>
+            <input type="submit" id="submit-button" class="btn-large waves-effect waves-light orange" value="confirm" onclick="planSetting(task, word_batch);"/>
         </div>
 
         <br><br>
@@ -131,6 +137,6 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
-<script src="js/login.js"></script>
+<script src="js/plan_setting.js"></script>
 </body>
 </html>

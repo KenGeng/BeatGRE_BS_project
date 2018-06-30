@@ -53,7 +53,12 @@ function showWord() {
                 document.getElementById('item'+i).children[0].innerHTML=ob.wordbatch[i-1].word;
                 if (ob.wordbatch[i-1].word==answer) {
                     document.getElementById('item'+i).children[1].children[0].innerHTML='<i class="material-icons">check</i>';
-                    document.getElementById('item'+i).addEventListener('click',function () {localStorage.test_right = Number(localStorage.test_right)+1;});
+                    // 设置只响应一次
+                    var flag=0;
+                    document.getElementById('item'+i).addEventListener('click',function () {if (flag==0) {
+                        localStorage.test_right = Number(localStorage.test_right)+1;
+                        flag=1;
+                    }});
                 }
                 else document.getElementById('item'+i).children[1].children[0].innerHTML="<i class=\"material-icons\">clear</i>";
 

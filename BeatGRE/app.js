@@ -188,7 +188,31 @@ app.post('/login', function (req, res){
 
 });
 
+app.post('/plan_setting', function (req, res) {
 
+    console.log(req.body);
+    console.log(req.body.user_name);
+    // console.log(req.body.page);
+    var data = {"user_name":req.body.user_name,"task":req.body.task,"word_batch":req.body.word_batch};
+    // console.log(req.query);
+    console.log("sql in: "+data.user_name);
+    connection.query('select cur_book from user_info where user_name = "'+data.user_name+'"',function(err, result){
+        if (result.length==0){
+            console.log("fuck1!");
+            throw err;
+        }else{
+            var book_id = result[0].cur_book;
+
+            console.log("book"+book_id);
+            connection.query(
+                'UPDATE '+data.user_name+'_setting '+' SET word_batch='+data.word_batch+' , daily_task='+data.task+'  where book_id = '+book_id+';',
+                function(err, result) {
+                    res.end('{"result" : "success", "status" : 200}');
+                });
+        }
+    });
+
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
