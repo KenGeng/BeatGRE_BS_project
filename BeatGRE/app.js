@@ -150,7 +150,7 @@ app.post('/login', function (req, res){
     console.log("sql in: "+user.user_name_email+" "+ user.password);
     connection.query(
         //check username first (high priority)
-        'select user_name,password  from user_info where user_name = ? ',
+        'select user_name,password,cur_book  from user_info where user_name = ? ',
         [user.user_name_email],
         function(err, result) {
             if (result.length!=0){
@@ -160,7 +160,8 @@ app.post('/login', function (req, res){
                 console.log(user.password);
                 if (result[0].password ===user.password ) {
                     console.log("???");
-                    res.end('{"result" : "success", "user_name" : '+'\"'+user.user_name_email+'\" }');//为了符合json的格式，要加双引号
+                    console.log(result[0].cur_book);
+                    res.end('{"result" : "success", "user_name" : '+'"'+user.user_name_email+'","cur_book": '+result[0].cur_book+'}');//为了符合json的格式，要加双引号
                 }else res.end('{"result" : "wrong_password", "status" : 200}');
             }else{
                 //check email
@@ -211,6 +212,23 @@ app.post('/plan_setting', function (req, res) {
                 });
         }
     });
+
+});
+app.post('/wordbook_setting', function (req, res) {
+
+    console.log(req.body);
+    console.log(req.body.user_name);
+
+    var data = {"user_name":req.body.user_name,"book_id":req.body.book_id};
+
+    console.log("sql in: "+data.user_name);
+    console.log("debug:"+data.book_id);
+    connection.query(
+        'UPDATE user_info SET cur_book='+data.book_id+' where user_name = "'+data.user_name+'";',
+        function(err, result) {
+            console.log("aaaa");
+            res.end('{"result" : "success", "status" : 200}');
+        });
 
 });
 // catch 404 and forward to error handler

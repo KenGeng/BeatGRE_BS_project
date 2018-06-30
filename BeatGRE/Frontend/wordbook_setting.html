@@ -37,19 +37,17 @@
 
         <div class="row center">
             <div class="input-field col s6 offset-s3 ">
-                <input id="wordbook_id" type="number" name="task" class="validate">
-                <label for="task">How many words a day?</label>
+
+                <h5 class="header center balck-text " >当前词书ID为:<span class="blue-grey-text" id="cur_book"></span> </h5>
+            </div>
+            <div class="input-field col s6 offset-s3 ">
+                <input id="wordbook_id" type="number" name="wordbook_id" class="validate">
+                <label for="wordbook_id">Input book id</label>
             </div>
         </div>
+
         <div class="row center">
-            <div class="input-field col s6 offset-s3">
-                <input id="word_batch" type="number" name="word_batch" class="validate">
-                <label for="word_batch">How many words a page?</label>
-                <!--<label for="password">password</label>-->
-            </div>
-        </div>
-        <div class="row center">
-            <input type="submit" id="submit-button" class="btn-large waves-effect waves-light orange" value="confirm" onclick="planSetting(task, word_batch);"/>
+            <input type="submit" id="submit-button" class="btn-large waves-effect waves-light orange" value="confirm" onclick="wordbookSetting(wordbook_id);"/>
         </div>
 
         <br><br>
@@ -68,7 +66,7 @@
                     <h2 class="center light-blue-text"><i class="material-icons">center_focus_strong</i></h2>
                     <h5 class="center ">专注于GRE单词</h5>
 
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. e for developers.</p>
                 </div>
             </div>
 
@@ -137,6 +135,6 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
-<script src="js/plan_setting.js"></script>
+<script src="js/wordbook_setting.js"></script>
 </body>
 </html>

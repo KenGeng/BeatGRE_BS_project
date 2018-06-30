@@ -30,7 +30,7 @@ function login(user_name_email, password){
             success: function (res) {
                 console.log(res);
                 var temp=JSON.parse(res);
-                console.log(temp.result);
+                console.log("debug"+temp.result+temp.cur_book);
                 if (temp.result == "not_exist"){
                     alert("用户名不存在!");
                 } else if (temp.result == "wrong_password"){
@@ -39,6 +39,7 @@ function login(user_name_email, password){
                     alert("登陆成功！欢迎!");
                     if (window.localStorage) {
                         //存储变量的值
+                        localStorage.setItem('cur_book',temp.cur_book) ;
                         localStorage.setItem('user_name',user_name_email.value) ;//must add value!!
                         window.location.href = 'userface.html';
                     } else {

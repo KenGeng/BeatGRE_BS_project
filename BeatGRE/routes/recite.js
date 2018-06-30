@@ -65,7 +65,7 @@ router.get('/', function(req, res, next) {
                                     console.log(GRE_List_str);
                                     GRE_List = JSON.parse(GRE_List_str);
                                     console.log("done");
-                                    ii=1;
+                                    // ii=1;
                                 }
 
 
