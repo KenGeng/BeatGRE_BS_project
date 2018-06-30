@@ -8,7 +8,7 @@ BeatGRE; project of coures B/S
 4. 复习计划 half-done 优化单词选取、上下页切换
 5. 单词本 done
 6. 考核 done
-7. 进度 
+7. 进度 done
 
 2、	用户登录后可以设置需要背的单词集，如4级、6级等。单词集可以从网上收集，数量多少不影响评分。 单词放到数据库里
 3、	用户可以维护自己的自定义单词 
@@ -31,5 +31,5 @@ BeatGRE; project of coures B/S
 --考核
 --进度
 
-注销over-进度-复习优化-手机适配
+注销over-进度over-复习优化over-手机适配over
 
