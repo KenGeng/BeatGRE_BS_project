@@ -31,5 +31,5 @@ BeatGRE; project of coures B/S
 --考核
 --进度
 
-注销-进度-复习优化-手机适配
+注销over-进度-复习优化-手机适配
 

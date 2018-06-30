@@ -80,10 +80,9 @@
           <div class="col center-align s12 m12">
             <span class="card-title"> <h3 >进度</h3></span>
             <div class="card-content white-text">
-              <br><br>
-              <div class="card-action">
-                <a class="white-text" href="#">点击进入</a>
-              </div>
+              <br>
+                <span ><h6>当前单词书进度</h6><span id="process"><h6></h6></span></span>
+
             </div>
           </div>
 
@@ -138,6 +137,40 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+<script>
+    var value = localStorage["user_name"];
+    document.getElementById("user_name").innerText=value;
+    var process_content = "123/2133";
+
+    var data = {"user_name":localStorage.user_name,"cur_book":localStorage.cur_book};
+
+    $.ajax({url:'http://localhost:5222/process',
+        processData: false,
+        cache:false,
+        contentType: "application/json; charset=utf-8",
+        //contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        // data:{page:1,pageSize:10,classify_id:77},
+        data:JSON.stringify(data),
+        datatype: "json",
+        type: 'post',
+        success: function (res) {
+            console.log(res);
+            var temp=JSON.parse(res);
+            console.log("debug"+temp.result+temp.done_num+temp.total);
+            if (temp.result == "success"){
+                process_content=temp.done_num+'/'+temp.total;
+                document.getElementById("process").innerHTML = process_content;
+            }
+
+
+        },
+        error:function (res) {
+            alert("未知错误!");
+        }
+
+    })
+
+</script>
 
 
 </body>

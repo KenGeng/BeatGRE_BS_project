@@ -67,12 +67,13 @@ function showWord() {
                 //singleline.content.getElementById("add-button").onclick=function(){alert('a1');};
                 document.getElementById("kkk").appendChild(singleline.content.cloneNode(true));
             }
+            document.getElementById("daily_process").innerHTML=localStorage.has_done+'/'+localStorage.task;
             $('.collapsible').collapsible();//一行代码 花了7个小时 哎
             for (var i = 0; i < batch.length; i++) {
                 document.getElementById("kkk").children[3+i].querySelector('input').addEventListener('click',function () {
                     var word = this.parentElement.parentElement.children[0].children.namedItem("word_content").innerHTML;
                     var trans = this.parentElement.parentElement.children[1].children.namedItem("translation_content").innerHTML;
-                    alert(trans);
+
                     $.ajax({url:'http://localhost:5222/diyword/add',
                         processData: false,
                         cache:false,

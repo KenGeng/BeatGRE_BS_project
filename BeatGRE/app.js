@@ -231,6 +231,28 @@ app.post('/wordbook_setting', function (req, res) {
         });
 
 });
+app.post('/process', function (req, res) {
+
+    console.log(req.body);
+    console.log(req.body.user_name);
+
+    var data = {"user_name":req.body.user_name,"book_id":req.body.cur_book};
+
+    console.log("sql in: "+req.body.cur_book);
+    connection.query('select count(*) as total from book_'+data.book_id, function(err, result) {
+        var total = result[0].total;
+        console.log("bbb"+total);
+        connection.query(
+            'select done_num  from '+data.user_name+'_setting where book_id = '+data.book_id,function(err, result) {
+                var done_num = result[0].done_num;
+                res.end('{"result" : "success", "done_num" : '+done_num+',"total" : '+total+'}');
+            });
+
+        }
+    );
+
+
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
