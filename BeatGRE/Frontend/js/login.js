@@ -41,7 +41,7 @@ function login(user_name_email, password){
                         //存储变量的值
                         localStorage.setItem('cur_book',temp.cur_book) ;
                         localStorage.setItem('user_name',user_name_email.value) ;//must add value!!
-                        window.location.href = 'userface.html';
+                        window.location.href = 'userinterface.html';
                     } else {
                         alert("NOT SUPPORT");
                     }

@@ -35,7 +35,7 @@ function planSetting(task, word_batch){
                 console.log(temp.result);
 
                 alert("更新成功！自动跳转回主页");
-                window.location.href = 'userface.html';
+                window.location.href = 'userinterface.html';
 
             },
             error:function (res) {

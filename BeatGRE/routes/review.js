@@ -82,11 +82,11 @@ router.get('/', function(req, res, next) {
                                     response+='"translation":"'+GRE_List[index].translation+'"}';
                                 }else{
                                     for (let i = 0; i < wordbatch-1; i++) {
-                                        var index = Math.round(Math.random()*task+done_num-task);
+                                        var index = Math.round(Math.random()*task);
                                         response+='{"word":"'+GRE_List[index].word+'",';
                                         response+='"translation":"'+GRE_List[index].translation+'"},';
                                     }
-                                    var index = Math.round(Math.random()*task+done_num-task);
+                                    var index = Math.round(Math.random()*task);
                                     response+='{"word":"'+GRE_List[index].word+'",';
                                     response+='"translation":"'+GRE_List[index].translation+'"}';
                                 }
